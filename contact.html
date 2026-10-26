@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Venkata Reddy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #312e81, #581c87);
+            color: #1e1b4b;
+            min-height: 100vh;
+            padding: 25px;
+        }
+        header {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            animation: fadeIn 1s ease;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #c084fc, #818cf8);
+            color: #1e1b4b;
+            display: grid;
+            place-items: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 9px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        nav a:hover, nav a.active {
+            background: white;
+            color: #581c87;
+            transform: translateY(-3px);
+        }
+        main {
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 22px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            animation: slideUp 0.8s ease;
+        }
+        .intro {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        .profile-photo {
+            width: 240px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 4px solid #c084fc;
+            box-shadow: 0 0 30px rgba(126, 34, 206, 0.35);
+            transition: 0.4s;
+        }
+        .profile-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(126, 34, 206, 0.6);
+        }
+        h1 {
+            color: #6d28d9;
+            margin-bottom: 12px;
+        }
+        h2 {
+            color: #7e22ce;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #0c90d2;
+            line-height: 1.7;
+        }
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 25px;
+        }
+        .contact-info {
+            background: #f5f3ff;
+            border-radius: 15px;
+            padding: 25px;
+        }
+        .contact-info p {
+            margin: 18px 0;
+            overflow-wrap: anywhere;
+        }
+        .contact-info a {
+            color: #6d28d9;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        label {
+            color: #312e81;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #c4b5fd;
+            border-radius: 8px;
+            font: inherit;
+            margin-top: 7px;
+        }
+        input:focus, textarea:focus {
+            outline: 2px solid #8b5cf6;
+            border-color: #8b5cf6;
+        }
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+        .form-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #6d28d9;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+        button:hover {
+            background: #4c1d95;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(109, 40, 217, 0.25);
+        }
+        button.clear-btn {
+            background: #64748b;
+        }
+        button.clear-btn:hover {
+            background: #475569;
+        }
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 700px) {
+            body {
+                padding: 12px;
+            }
+            header {
+                justify-content: center;
+            }
+            nav {
+                justify-content: center;
+            }
+            .card {
+                padding: 22px;
+            }
+            .intro {
+                justify-content: center;
+                text-align: center;
+            }
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <div class="logo">VT</div>
+            <div>
+                <h2>Venkata Reddy</h2>
+                <p>Python Full Stack Developer</p>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="certifications.html">Certificates</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <div class="intro">
+                <img src="./venkatareddy.jpeg" alt="Venkata Reddy Tiyyagura" class="profile-photo">
+                <div>
+                    <h1>Let's Connect</h1>
+                    <p>Have a question or opportunity? Feel free to get in touch.</p>
+                </div>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h2>Contact Details</h2>
+                    <p>
+                        <strong>Email</strong><br>
+                        <a href="mailto:venkatareddytiyyagura6@gmail.com">venkatareddytiyyagura6@gmail.com</a>
+                    </p>
+                    <p>
+                        <strong>LinkedIn</strong><br>
+                        <a href="https://www.linkedin.com/in/venkata-reddy-tiyyagura" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a>
+                    </p>
+                    <p>
+                        <strong>GitHub</strong><br>
+                        <a href="https://github.com/venkatareddy98" target="_blank" rel="noopener noreferrer">View GitHub Profile</a>
+                    </p>
+                </div>
+                <div>
+                    <h2>Send a Message</h2>
+                    <form action="mailto:venkatareddytiyyagura6@gmail.com" method="post" enctype="text/plain">
+                        <label for="name">Your Name
+                            <input type="text" id="name" name="Name" placeholder="Enter your name" required>
+                        </label>
+                        <label for="email">Your Email
+                            <input type="email" id="email" name="Email" placeholder="Enter your email" required>
+                        </label>
+                        <label for="subject">Subject
+                            <input type="text" id="subject" name="Subject" placeholder="Enter subject" required>
+                        </label>
+                        <label for="message">Message
+                            <textarea id="message" name="Message" placeholder="Write your message..." required></textarea>
+                        </label>
+                        <div class="form-buttons">
+                            <button type="submit">Send Message</button>
+                            <button type="reset" class="clear-btn">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Venkata Reddy Tiyyagura</p>
+    </footer>
+</body>
+</html>
