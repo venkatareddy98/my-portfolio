@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications | Venkata Reddy</title>
+    <title>Education | Venkata Reddy</title>
     <style>
         * {
             box-sizing: border-box;
@@ -81,7 +81,7 @@
             display: flex;
             align-items: center;
             gap: 25px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             flex-wrap: wrap;
         }
         .profile-photo {
@@ -103,27 +103,47 @@
         }
         h2 {
             color: #7e22ce;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
         p {
             color: #0c90d2;
             line-height: 1.7;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 18px;
+        .timeline {
+            border-left: 3px solid #c4b5fd;
+            margin-left: 10px;
+            padding-left: 25px;
         }
-        .certificate {
+        .education {
             background: #f5f3ff;
             padding: 23px;
-            border-radius: 15px;
-            border-left: 5px solid #8b5cf6;
+            border-radius: 14px;
+            margin-bottom: 22px;
+            position: relative;
             transition: 0.35s;
         }
-        .certificate:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 25px rgba(109, 40, 217, 0.2);
+        .education::before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background: #7c3aed;
+            border: 3px solid white;
+            border-radius: 50%;
+            position: absolute;
+            left: -36px;
+            top: 25px;
+        }
+        .education:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 25px rgba(109, 40, 217, 0.18);
+        }
+        .year {
+            display: inline-block;
+            background: #ede9fe;
+            color: #6d28d9;
+            padding: 7px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
         }
         footer {
             text-align: center;
@@ -178,48 +198,44 @@
             </div>
         </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="projects.html">Projects</a>
-            <a href="certifications.html" class="active">Certificates</a>
-            <a href="education.html">Education</a>
-            <a href="contact.html">Contact</a>
+            <a href="{{ url_for('home') }}">Home</a>
+<a href="{{ url_for('about') }}">About</a>
+<a href="{{ url_for('skills') }}">Skills</a>
+<a href="{{ url_for('projects') }}">Projects</a>
+<a href="{{ url_for('certifications') }}">Certifications</a>
+<a href="{{ url_for('education') }}">Education</a>
+<a href="{{ url_for('contact') }}">Contact</a>
         </nav>
     </header>
     <main>
         <section class="card">
             <div class="intro">
-                <img src="./venkatareddy.jpeg" alt="Venkata Reddy Tiyyagura" class="profile-photo">
-                <div>
-                    <h1>Certifications</h1>
-                    <p>Courses and certifications supporting my technical knowledge and continuous learning.</p>
+                <img
+    src="{{ url_for('static', filename='venkatareddy.jpeg') }}"
+    alt="My Profile Photo" width="150"
+><div>
+                    <h1>My Education</h1>
+                    <p>My academic journey and educational qualifications.</p>
                 </div>
             </div>
-            <div class="grid">
-                <article class="certificate">
-                    <h2>Google AI-ML Virtual Internship</h2>
-                    <p>EduSkills</p>
+            <div class="timeline">
+                <article class="education">
+                    <span class="year">2021–2025</span>
+                    <h2>B.Tech — Artificial Intelligence and Data Science</h2>
+                    <p>Seshadri Rao Gudlavalleru Engineering College</p>
+                    <p><strong>CGPA:</strong> 9.14 / 10</p>
                 </article>
-                <article class="certificate">
-                    <h2>Machine Learning with Python</h2>
-                    <p>edX</p>
+                <article class="education">
+                    <span class="year">2019–2021</span>
+                    <h2>Intermediate — MPC</h2>
+                    <p>Narayana Junior College, Vuyyuru</p>
+                    <p><strong>Marks:</strong> 974 / 1000</p>
                 </article>
-                <article class="certificate">
-                    <h2>Privacy and Security in Online Social Media</h2>
-                    <p>NPTEL</p>
-                </article>
-                <article class="certificate">
-                    <h2>AWS Cloud Foundations</h2>
-                    <p>Amazon Web Services</p>
-                </article>
-                <article class="certificate">
-                    <h2>Generative AI</h2>
-                    <p>Oracle</p>
-                </article>
-                <article class="certificate">
-                    <h2>Java Certification</h2>
-                    <p>HackerRank</p>
+                <article class="education">
+                    <span class="year">2018–2019</span>
+                    <h2>SSC</h2>
+                    <p>Flora English Medium School, Vuyyuru</p>
+                    <p><strong>CGPA:</strong> 9.8 / 10</p>
                 </article>
             </div>
         </section>
